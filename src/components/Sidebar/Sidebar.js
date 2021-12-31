@@ -12,23 +12,26 @@ export default function Sidebar() {
 
   return (
     <aside className="font-serif">
-      <section className="border-b">
-        <div className="flex items-center justify-start rounded-sm cursor-pointer py-3 text-[red] hover:bg-gray-100 ">
+      <section className="border-b ">
+        <div className="flex w-full items-center justify-center md:justify-start rounded-sm cursor-pointer py-3 text-[red] hover:bg-gray-100 ">
           {" "}
-          <HomeIcon className="h-8 w-8 mr-2" /> <h1>For You</h1>{" "}
+          <HomeIcon className="h-8 w-8 mr-2" />{" "}
+          <h1 className="hidden md:block">For You</h1>{" "}
         </div>
-        <div className="flex items-center justify-start rounded-sm cursor-pointer py-3 hover:bg-gray-100 ">
+        <div className="flex w-full items-center justify-center md:justify-start rounded-sm cursor-pointer py-3 hover:bg-gray-100 ">
           {" "}
-          <UsersIcon className="h-8 w-8 mr-2" /> <h1>Following</h1>{" "}
+          <UsersIcon className="h-8 w-8 mr-2" />{" "}
+          <h1 className="hidden md:block">Following</h1>{" "}
         </div>
-        <div className="flex items-center justify-start rounded-sm cursor-pointer py-3 hover:bg-gray-100 ">
+        <div className="flex w-full mx-auto items-center justify-center md:justify-start rounded-sm cursor-pointer py-3 hover:bg-gray-100 ">
           {" "}
-          <VideoCameraIcon className="h-8 w-8 mr-2" /> <h1>LIVE</h1>
+          <VideoCameraIcon className="h-8 w-8 mr-2" />{" "}
+          <h1 className="hidden md:block">LIVE</h1>
         </div>
       </section>
       <br />
       <section className="border-b">
-        <p className="my-2">Suggested accounts</p>
+        <p className="hidden md:block my-2">Suggested accounts</p>
         <SuggestedAccount
           userImage={generator.generateRandomAvatar("mary ")}
           username={faker.name.findName()}
@@ -54,17 +57,19 @@ export default function Sidebar() {
           username={faker.name.findName()}
           displayName={faker.name.findName()}
         />
-        <p className="cursor-pointer my-3 text-red-500 text-sm">See all</p>
+        <p className="hidden md:block cursor-pointer my-3 text-red-500 text-sm">
+          See all
+        </p>
       </section>
       <br />
-      <section className="border-b min-h-[10vh]">
+      <section className="hidden md:block border-b min-h-[10vh]">
         <h1>Following accounts</h1>
         <p className="text-gray-500 text-sm my-2">
           Accounts you follow will appear here
         </p>
       </section>
-      <h1 className="my-3">Discover</h1>
-      <section className="flex flex-wrap border-b">
+      <h1 className="hidden md:flex my-3">Discover</h1>
+      <section className="hidden md:flex flex-wrap border-b">
         <span className="cursor-pointer hover:bg-gray-100 px-2 py-1 h-8 m-2 flex items-center justify-center rounded-full border">
           # christmas2021
         </span>
@@ -104,22 +109,47 @@ export default function Sidebar() {
         </span>
       </section>
       <br />
-      <section className="flex flex-wrap">
-        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">About</span>
-        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">Newsroom</span>
-        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">Careers</span>
-        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">TikTok for Good</span>
-        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">Developers</span>
-        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">Help</span>
-        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">Safety</span>
-        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">Privacy</span>
-        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">Portal</span>
-        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">Community</span>
-        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">Guidelines</span>
+      <section className="hidden md:flex flex-wrap  ">
+        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">
+          About
+        </span>
+        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">
+          Newsroom
+        </span>
+        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">
+          Careers
+        </span>
+        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">
+          TikTok for Good
+        </span>
+        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">
+          Developers
+        </span>
+        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">
+          Help
+        </span>
+        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">
+          Safety
+        </span>
+        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">
+          Privacy
+        </span>
+        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">
+          Portal
+        </span>
+        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">
+          Community
+        </span>
+        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">
+          Guidelines
+        </span>
         <br />
       </section>
-        <span className="p-1 m-1 text-sm text-gray-400 cursor-pointer hover:underline">C 2021 TikTok</span>
-        <br /><br />
+      <span className="p-1 w-full mx-auto text-sm text-gray-400 cursor-pointer hover:underline">
+        C 2021 TikTok
+      </span>
+      <br />
+      <br />
     </aside>
   );
 }
