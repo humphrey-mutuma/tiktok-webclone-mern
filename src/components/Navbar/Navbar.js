@@ -5,7 +5,7 @@ import { SearchIcon } from "@heroicons/react/outline";
 
 export default function Navbar() {
   return (
-    <nav className=" w-full border-b-2  sticky top-0 bg-white">
+    <nav className=" w-full border-b-2  h-[11vh] sticky top-0 bg-white">
       <header className="grid grid-cols-3 max-w-6xl mx-auto">
         <div className="col-span-1 flex items-center justify-start">
           <img className=" w-28 object-contain" src={TikTokLogo} alt="tiktok" />
