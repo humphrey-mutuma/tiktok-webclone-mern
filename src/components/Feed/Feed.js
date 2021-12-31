@@ -1,4 +1,6 @@
 import { MusicNoteIcon } from "@heroicons/react/solid";
+import { HeartIcon } from "@heroicons/react/outline";
+import { ChatIcon, ReplyIcon } from "@heroicons/react/solid";
 
 export default function Feed({
   userImage,
@@ -8,7 +10,7 @@ export default function Feed({
   postVideo,
   postLikes,
   postComments,
-  postRetweets,
+  postShares,
 }) {
   return (
     <section className="p-2">
@@ -36,10 +38,38 @@ export default function Feed({
             </button>
           </section>
         </div>
-        <div></div>
-        <div></div>
       </header>
-      <main></main>
+      <main className="p-2 flex">
+        <section className=" ml-10 h-[76vh] w-[18rem] rounded-lg">
+          <video className="w-full h-full rounded-lg object-fill" controls>
+            <source src={postVideo} type="video/mp4" />
+            <source src={postVideo} type="video/ogg" />
+            Your browser does not support HTML video.
+          </video>
+        </section>
+        <section className=" ml-3 flex items-end  justify-center">
+          <div className="mb-5">
+            <span className="grid place-items-center">
+              <div className=" h-10  w-10 rounded-full p-1 bg-gray-200 ">
+                <HeartIcon className=" h-full w-full   text-[red]  " />
+              </div>
+              <p className="text-sm text-gray-500">{postLikes}</p>
+            </span>
+            <span className="grid place-items-center">
+              <div className=" h-10  w-10 rounded-full p-1 bg-gray-200 ">
+                <ChatIcon className=" h-full w-full   text-black  " />
+              </div>
+              <p className="text-sm text-gray-500">{postComments}</p>
+            </span>
+            <span className="grid place-items-center">
+              <div className=" h-10  w-10 rounded-full p-1 bg-gray-200 ">
+                <ReplyIcon className=" h-full w-full   text-black  " />
+              </div>
+              <p className="text-sm text-gray-500">{postShares}</p>
+            </span>
+          </div>
+        </section>
+      </main>
     </section>
   );
 }
