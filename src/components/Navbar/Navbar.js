@@ -1,7 +1,11 @@
 import React from "react";
 import TikTokLogo from "../../images/TikTok-Logo.svg";
-import { DotsVerticalIcon } from "@heroicons/react/solid";
-import { SearchIcon } from "@heroicons/react/outline";
+import {
+  ChatAltIcon,
+  CloudUploadIcon,
+  DotsVerticalIcon,
+} from "@heroicons/react/solid";
+import { PaperAirplaneIcon, SearchIcon } from "@heroicons/react/outline";
 
 export default function Navbar() {
   return (
@@ -24,14 +28,24 @@ export default function Navbar() {
             </div>
           </form>
         </div>
-        <div className=" col-span-1 flex items-center justify-end">
-          <button className=" font-bold hover:underline text-sm sm:text-base  p-2 ">
+        <div className=" col-span-1 flex items-center justify-between ">
+          {/* <button className=" font-bold hover:underline text-sm sm:text-base  p-2 ">
             Upload
           </button>
           <button className="sm:mx-3 text-sm sm:text-base flex flex-nowrap bg-[red] text-white font-bold py-2 px-3 sm:px-6 rounded-md shadow-md hover:bg-red-500">
             Log In
-          </button>
-          <DotsVerticalIcon className="h-5 w-5 cursor-pointer text-black " />
+          </button> */}
+          <div className="  sm:1/3 lg:w-1/2"></div>
+          <CloudUploadIcon className="h-6 w-6 cursor-pointer text-black " />
+          <PaperAirplaneIcon className="h-6 w-6 cursor-pointer text-black " />
+          <ChatAltIcon className="h-6 w-6 cursor-pointer text-black " />
+          <div className="h-10 w-10 mr-1 ">
+            <img
+              className="w-full h-full object-cover rounded-full cursor-pointer"
+              src="https://cdn.pixabay.com/photo/2016/11/29/13/14/attractive-1869761__340.jpg"
+              alt=""
+            />
+          </div>{" "}
         </div>
       </header>
     </nav>

@@ -31,22 +31,21 @@ export default function Feed({
               <img src={userImage} alt="" />
             </div>
             <div className=" ml-2 w-3/4 lg:w-1/2  ">
-              <h1 className="cursor-pointer hover:underline">
+              <h1 className="cursor-pointer hover:underline line-clamp-1 ">
                 {username}{" "}
                 <span className="text-xs text-gray-500">{displayName}</span>
                 <br />
-                <p className="text-xs text-gray-500 my-1">
-                  another TikTok #dance ! #flipbook
-                </p>
               </h1>
-
+              <p className="text-xs text-gray-500 my-1 line-clamp-1">
+                another TikTok #dance ! #flipbook
+              </p>
               <div className="flex w-full items-center ">
                 <MusicNoteIcon className=" h-4 w-4 mr-1 text-black  " />
                 <div className="flex-1">
                   <Ticker mode="smooth">
                     {({ index }) => (
                       <>
-                        <h1>{postSong}</h1>
+                        <h1 className="line-clamp-1">{postSong}</h1>
                       </>
                     )}
                   </Ticker>
@@ -55,7 +54,7 @@ export default function Feed({
             </div>
           </section>
           <section className="flex">
-            <button className="border border-red-500 text-[red] h-10  px-4  rounded-sm">
+            <button className="border border-red-500 text-[red] h-8 sm:h-10 px-2 sm:px-4  rounded-full sm:rounded-sm">
               Follow
             </button>
           </section>
