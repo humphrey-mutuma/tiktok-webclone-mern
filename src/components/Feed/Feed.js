@@ -28,7 +28,7 @@ export default function Feed({
         <div className=" flex justify-between pt-1 ">
           <section className="flex  items-center justify-start flex-1 ">
             <div className="h-full w-10">
-              <img className="rounded-full" src={userImage} alt="" />
+              <img className="w-10  h-10 object-cover rounded-full" src={userImage} alt="" />
             </div>
             <div className=" ml-2 w-3/4 lg:w-1/2  ">
               <h1 className="cursor-pointer hover:underline line-clamp-1 ">
