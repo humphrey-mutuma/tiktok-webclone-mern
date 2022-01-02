@@ -11,11 +11,11 @@ function App() {
     <main>
       <Navbar />
       <section className="grid grid-cols-3 max-w-6xl mx-auto ">
-        <aside className=" hidden sm:grid  sm:col-span-1 h-[89vh] overflow-x-hidden overflow-y-scroll sticky top-[11vh] ">
+        <aside className=" hidden sm:grid  sm:col-span-1 h-[89vh] overflow-x-hidden overflow-y-scroll sticky top-[11vh] scrollbar-thin  scrollbar-thumb-gray-400 scrollbar-track-white ">
           <Sidebar />
         </aside>
         <section className="col-span-3 sm:col-span-2">
-          <section className="w-full h-[89vh] p-4 overflow-y-scroll   snap snap-y snap-mandatory">
+          <section className="w-full h-[89vh] p-4 overflow-y-scroll scrollbar-hide   snap snap-y snap-mandatory">
             <div className="snap-start  w-full h-screen">
               <Feed
                 userImage={generator.generateRandomAvatar("nazuu")}
