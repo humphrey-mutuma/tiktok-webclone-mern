@@ -1,15 +1,11 @@
 import React from "react";
 import TikTokLogo from "../../images/TikTok-Logo.svg";
-import {
-  ChatAltIcon,
-  CloudUploadIcon,
-  DotsVerticalIcon,
-} from "@heroicons/react/solid";
+import { ChatAltIcon, CloudUploadIcon } from "@heroicons/react/solid";
 import { PaperAirplaneIcon, SearchIcon } from "@heroicons/react/outline";
 
 export default function Navbar() {
   return (
-    <nav className=" w-full border-b-2  h-[11vh] sticky top-0 bg-white z-50">
+    <nav className=" w-full border-b-[1px]  h-[11vh] sticky top-0 bg-white z-50">
       <header className="grid grid-cols-2 sm:grid-cols-3 max-w-6xl mx-auto">
         <div className=" col-span-1 flex items-center justify-start">
           <img className=" w-28 object-contain" src={TikTokLogo} alt="tiktok" />
@@ -37,9 +33,9 @@ export default function Navbar() {
           </button> */}
           <div className="  sm:1/3 lg:w-1/2"></div>
           <CloudUploadIcon className="h-6 w-6 cursor-pointer text-black " />
-          <PaperAirplaneIcon className="h-6 w-6 cursor-pointer text-black " />
+          <PaperAirplaneIcon className="rotate-45 h-6 w-6 cursor-pointer text-black " />
           <ChatAltIcon className="h-6 w-6 cursor-pointer text-black " />
-          <div className="h-10 w-10 mr-1 ">
+          <div className="h-10 w-10 mr-1 rounded-full">
             <img
               className="w-full h-full object-cover rounded-full cursor-pointer"
               src="https://cdn.pixabay.com/photo/2016/11/29/13/14/attractive-1869761__340.jpg"

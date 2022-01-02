@@ -23,12 +23,12 @@ export default function Feed({
   const [shares, setShares] = useState(false);
 
   return (
-    <section className=" border-b">
+    <section className="border-b-[1px]">
       <header>
-        <div className=" flex justify-between">
-          <section className="flex  items-center justify-start py-2 flex-1 ">
-            <div className="h-10 w-10 bg-black rounded-full border-[1px solid red]">
-              <img src={userImage} alt="" />
+        <div className=" flex justify-between pt-1 ">
+          <section className="flex  items-center justify-start flex-1 ">
+            <div className="h-full w-10">
+              <img className="rounded-full" src={userImage} alt="" />
             </div>
             <div className=" ml-2 w-3/4 lg:w-1/2  ">
               <h1 className="cursor-pointer hover:underline line-clamp-1 ">
@@ -37,11 +37,11 @@ export default function Feed({
                 <br />
               </h1>
               <p className="text-xs text-gray-500 my-1 line-clamp-1">
-                another TikTok #dance ! #flipbook
+                another TikTok #dance!
               </p>
               <div className="flex w-full items-center ">
                 <MusicNoteIcon className=" h-4 w-4 mr-1 text-black  " />
-                <div className="flex-1">
+                <div className="flex-1 ">
                   <Ticker mode="smooth">
                     {({ index }) => (
                       <>
@@ -60,7 +60,7 @@ export default function Feed({
           </section>
         </div>
       </header>
-      <main className="p-2 flex">
+      <main className="p-2 flex relative">
         <section className=" ml-10 h-[75vh] w-[18rem] rounded-lg">
           <video loop className="w-full h-full rounded-lg object-fill" controls>
             <source src={postVideo} type="video/mp4" />
@@ -68,7 +68,7 @@ export default function Feed({
             Your browser does not support HTML video.
           </video>
         </section>
-        <section className=" ml-3 flex items-end  justify-center">
+        <section className=" absolute right-4 bottom-14 sm:static flex items-end  justify-center  sm:ml-3">
           <div className="mb-5">
             <span className="grid place-items-center">
               {likes ? (

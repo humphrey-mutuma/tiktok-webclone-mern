@@ -8,7 +8,7 @@ const generator = new AvatarGenerator();
 
 function App() {
   return (
-    <main className="">
+    <main>
       <Navbar />
       <section className="grid grid-cols-3 max-w-6xl mx-auto ">
         <aside className=" hidden sm:grid  sm:col-span-1 h-[89vh] overflow-x-hidden overflow-y-scroll sticky top-[11vh] ">
@@ -22,7 +22,7 @@ function App() {
                 username={faker.name.findName()}
                 displayName={faker.name.findName()}
                 postSong="99 problems but a react ain't one"
-                postVideo="https://v16-webapp.tiktok.com/ebe60415c278f561eb7ec15c90f2829d/61d0ba2d/video/tos/alisg/tos-alisg-pve-0037c001/85b2004f059a40b19abf93430b20c364/?a=1988&br=4964&bt=2482&cd=0%7C0%7C1&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=Yu12_FBqkag3-I&l=2022010114311701024504302602F959BF&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3czOTU6ZjQ2OjMzODczNEApO2k5OGg1PGU7NzQ5O2ZmM2diNGNzcjRnbjVgLS1kMS1zczI0XzExNGAvXjNeX2FeLjY6Yw%3D%3D&vl=&vr="
+                postVideo="https://v16-webapp.tiktok.com/a33386b3b5cc74f71e2d6732db3f5c2c/61d1b885/video/tos/alisg/tos-alisg-pve-0037c001/9129aa0183be4848bde9e8533b46469c/?a=1988&br=3248&bt=1624&cd=0%7C0%7C1&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=Yu12_FBqkag3-I&l=202201020836420102452441950C8F182A&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=amp0Ojk6Zms4ODMzODczNEApPDc2NzY8Zjs2Nzw0OjQ8aGcuZ2VpcjRnLmJgLS1kMS1zcy01NC5hMDVfL2I0NS1fLjU6Yw%3D%3D&vl=&vr="
                 postLikes={faker.random.number()}
                 postComments={faker.random.number()}
                 postShares={faker.random.number()}
@@ -34,7 +34,7 @@ function App() {
                 username={faker.name.findName()}
                 displayName={faker.name.findName()}
                 postSong="original sound - Moods"
-                postVideo="https://v16-webapp.tiktok.com/a463d390153e5ec5de4b604e01ce0fe6/61d0c6b3/video/tos/alisg/tos-alisg-pve-0037c001/48754f7fd50c4132b766cc2dcb6b6f25/?a=1988&br=3324&bt=1662&cd=0%7C0%7C1&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=Yu12_FBqkag3-I&l=202201011524530102450050272109174D&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=ajppaTc6ZjNwOTMzODczNEApM2U5Z2dpNWRlNzlmPDtpOmdjc21fcjQwYXFgLS1kMS1zczAvNi9gYjViXi8uXi82YTY6Yw%3D%3D&vl=&vr="
+                postVideo="https://www.tiktok.com/@m.alby_/video/7015572126774152450?is_from_webapp=1&sender_device=pc&web_id7047737202964645377"
                 postLikes={faker.random.number()}
                 postComments={faker.random.number()}
                 postShares={faker.random.number()}
