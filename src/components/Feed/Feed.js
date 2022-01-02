@@ -6,7 +6,7 @@ import {
   HeartIcon as HeartIcon2,
 } from "@heroicons/react/solid";
 import Ticker from "react-ticker";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
 export default function Feed({
   userImage,
@@ -21,10 +21,9 @@ export default function Feed({
   const [likes, setLikes] = useState(false);
   const [comments, setComments] = useState(false);
   const [shares, setShares] = useState(false);
-  const likesref = useRef(postLikes);
 
   return (
-    <section className="m-2 p-2 border-b">
+    <section className=" border-b">
       <header>
         <div className=" flex justify-between">
           <section className="flex  items-center justify-start py-2 flex-1 ">
@@ -63,7 +62,7 @@ export default function Feed({
         </div>
       </header>
       <main className="p-2 flex">
-        <section className=" ml-10 h-[76vh] w-[18rem] rounded-lg">
+        <section className=" ml-10 h-[75vh] w-[18rem] rounded-lg">
           <video loop className="w-full h-full rounded-lg object-fill" controls>
             <source src={postVideo} type="video/mp4" />
             <source src={postVideo} type="video/ogg" />
