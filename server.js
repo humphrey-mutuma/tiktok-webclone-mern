@@ -12,8 +12,13 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*"),
+    res.setHeader("Access-Control-Allow-Headers", "*"),
+    next();
+});
 
-// connection to database 
+// connection to database
 mongoose
   .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
@@ -21,14 +26,19 @@ mongoose
     // useCreateIndex: true,
   })
   .then(() => console.log("Database connected!"))
-  .catch((err) => console.log("Error connecting",err));
+  .catch((err) => console.log("Error connecting", err));
 
 // routes
 app.get("/", (req, res) => res.send("Hello World!"));
 
 app.get("/api/feed", (req, res) => {
-  const feed = []
-  res.status(200).send(feed);
+  Feed.find({}, (err, data) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(200).send(data);
+    }
+  });
 });
 
 // post api to add data to db
@@ -42,7 +52,5 @@ app.post("/api/feed", (req, res) => {
     }
   });
 });
-
-
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
