@@ -5,7 +5,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import Feed from "./models/feedModel.js";
 
-const PORT = 5000 || process.env.PORT;
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 // middleware
