@@ -61,8 +61,8 @@ export default function Feed({
         </div>
       </header>
       <main className="p-2 flex relative">
-        <section className=" ml-10 h-[75vh] w-[18rem] rounded-lg">
-          <video loop className="w-full h-full rounded-lg object-fill" controls>
+        <section className=" bg-black ml-10 h-[75vh] w-[18rem] rounded-lg">
+          <video loop className="w-full h-full rounded-lg object-contain" controls>
             <source src={postVideo} type="video/mp4" />
             <source src={postVideo} type="video/ogg" />
             Your browser does not support HTML video.
